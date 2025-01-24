@@ -1,0 +1,45 @@
+section.main
+    margin-bottom: 80px
+    +screen(m)
+        margin-bottom: 21px
+
+    div.text
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 20px
+        +screen(m)
+            grid-template-columns: 1fr
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 24px  110px
+        +screen(m)
+            grid-gap: 24px
+        +screen(xs)
+            grid-template-columns: 1fr
+            grid-gap: 15px
+
+        div.contact
+            display: grid
+            grid-gap: 10px
+            +screen(m)
+                grid-gap: 5px
+
+            & > *:first-child
+                font-weight: 400
+                font-size: 14px
+                line-height: 130%
+                text-transform: uppercase
+                color: $dopolnitelnyy-serebro
+                +screen(m)
+                    font-size: 12px
+
+            & > *:last-child
+                font-weight: 400
+                font-size: 18px
+                line-height: 130%
+                color: rgba(35, 31, 32, 0.8)
+                opacity: 0.8
+                +screen(m)
+                    font-size: 12px

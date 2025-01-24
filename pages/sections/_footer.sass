@@ -1,0 +1,147 @@
+footer
+    padding-bottom: 50px
+
+    div.container
+        display: grid
+        border-top: 1px solid rgba(35, 31, 32, 0.3)
+
+    div.top
+        display: grid
+        grid-template-columns: max-content 1fr max-content
+        grid-gap: 90px
+        padding-bottom: 82px
+        +screen(l)
+            grid-template-columns: max-content 1fr
+            justify-items: end
+            grid-gap: 0px
+            border-bottom: 1px solid rgba(0,0,0,0.1)
+            padding-bottom: 24px
+        +screen(s)
+            grid-template-columns: 1fr
+            justify-items: start
+            padding-top: 15px
+
+        a.logotype
+            width: 222px
+            margin-bottom: -22px
+            +screen(xl)
+                width: 141px
+            +screen(l)
+                grid-row: 2 span
+                margin-bottom: unset
+            +screen(s)
+                margin-right: -20px
+
+            img
+                width: 100%
+
+        menu
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            align-items: center
+            grid-gap: 30px
+            +screen(l)
+                margin: 24px 0
+            +screen(s)
+                grid-gap: 10px
+
+            a
+                font-weight: 400
+                font-size: 14px
+                line-height: 130%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+                color: $osnovnoy-chernyy
+                +screen(m)
+                    font-size: 12px
+
+                &:hover
+                    color: $dopolnitelnyy-alyy
+
+        div.contacts
+            display: grid
+            grid-template-columns: repeat(2, max-content)
+            align-items: center
+            grid-gap: 35px
+            +screen(s)
+                grid-template-columns: 1fr
+                grid-gap: 18px
+                justify-items: start
+
+            div.links
+                display: grid
+                grid-gap: 4px
+                +screen(l)
+                    grid-auto-flow: column
+                    grid-auto-columns: max-content
+                    grid-gap: 11px
+                a
+                    font-weight: 400
+                    font-size: 20px
+                    line-height: 130%
+                    letter-spacing: 0.01em
+                    text-decoration: underline
+                    text-decoration-skip-ink: none
+                    text-decoration-thickness: 1px
+                    text-align: right
+                    color: $osnovnoy-chernyy
+                    +screen(m)
+                        font-size: 14px
+                        text-transform: uppercase
+
+                    &:hover
+                        text-decoration: none
+
+    div.bottom
+        display: grid
+        grid-template-columns: repeat(3, max-content)
+        justify-content: space-between
+        grid-gap: 32px
+        margin-bottom: 32px
+        +screen(l)
+            padding-top: 24px
+            margin-bottom: 20px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 10px
+
+        span.copyright
+            font-weight: 400
+            font-size: 14px
+            color: $osnovnoy-chernyy
+
+        a.policy
+            font-weight: 400
+            font-size: 14px
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: $osnovnoy-chernyy
+            &:hover
+                text-decoration: none
+
+        a.mwi
+            display: grid
+            grid-template-columns: repeat(2, max-content)
+            grid-gap: 7px
+            span
+                font-weight: 400
+                font-size: 13px
+                text-align: center
+                color: $osnovnoy-chernyy
+
+    span.gost
+        font-weight: 400
+        font-size: 14px
+        line-height: 120%
+        text-align: center
+        color: $osnovnoy-seryy
+        opacity: 0.5
+        +screen(s)
+            font-size: 12px
+            text-align: left
+
+            br
+                display: none
+
+        

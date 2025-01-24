@@ -1,0 +1,234 @@
+section.specs
+    padding-top: 80px
+    padding-bottom: 80px
+    +screen(m)
+        padding-top: 60px
+        padding-bottom: 60px
+
+    div.models
+        display: grid
+        grid-gap: 30px
+        margin-bottom: 80px
+        +screen(m)
+            margin-bottom: 60px
+
+        div.list
+            display: grid
+            grid-template-columns: repeat(12, 1fr)
+            grid-gap: 33px
+            +screen(xl)
+                grid-template-columns: repeat(10, 1fr)
+            +screen(l)
+                grid-template-columns: repeat(8, 1fr)
+            +screen(m)
+                grid-template-columns: repeat(6, 1fr)
+            +screen(s)
+                grid-template-columns: repeat(4, 1fr)
+            +screen(xs)
+                grid-template-columns: repeat(3, 1fr)
+            +screen(m)
+                grid-gap: 20px 13px
+
+        a.model
+            display: grid
+            align-content: start
+            grid-gap: 13px
+            img
+                width: 100%
+                max-width: 107px
+                height: 100px
+                object-fit: contain
+                object-position: center center
+                border-radius: 2px
+                border: 1px solid transparent
+                +screen(m)
+                    max-width: 103px
+
+            span
+                font-weight: 400
+                font-size: 16px
+                line-height: 130%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+                color: $osnovnoy-chernyy
+                opacity: 0.8
+                +screen(m)
+                    font-size: 12px
+
+            &:hover
+                img
+                    border: 1px solid $dopolnitelnyy-alyy
+
+    div.tech
+        display: grid
+        grid-gap: 50px
+        margin-bottom: 80px
+        +screen(m)
+            grid-gap: 30px
+            margin-bottom: 60px
+
+        div.text
+            display: grid
+            grid-gap: 24px
+            +screen(m)
+                grid-gap: 10px
+
+            span
+                font-weight: 400
+                font-size: 18px
+                line-height: 130%
+                color: $osnovnoy-chernyy
+                opacity: 0.8
+                +screen(m)
+                        font-size: 12px
+
+        div.list
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 20px
+            +screen(m)
+                grid-template-columns: 1fr
+                grid-gap: 10px
+
+            div.item
+                display: grid
+                align-items: start
+                justify-content: space-between
+                grid-template-columns: repeat(2, 1fr)
+                grid-gap: 10px
+                font-weight: 400
+                font-size: 14px
+                line-height: 130%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+                color: $osnovnoy-chernyy
+                border-bottom: 0.50px solid rgba(138, 141, 143, 0.3)
+                padding-bottom: 10px
+                +screen(m)
+                    font-size: 12px
+
+                span:first-child
+                    opacity: 0.5
+
+                span:last-child
+                    text-align: right
+
+    div.tabs
+        div.tabs_captions
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: 1fr
+            +screen(s)
+                grid-auto-flow: row
+
+        div.tab_caption
+            cursor: pointer
+            border-bottom: 1px solid rgba(0,0,0,0.2)
+            text-align: center
+            font-weight: 400
+            font-size: 14px
+            line-height: 130%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            color: #000
+            padding-bottom: 24px
+            +screen(m)
+                padding-bottom: 10px
+                font-size: 12px
+            +screen(s)
+                padding-top: 10px
+                text-align: left
+
+            &:hover
+                color: $dopolnitelnyy-alyy
+
+            &.opened
+                pointer-events: none
+                border-bottom: 1px solid black
+
+        div.tab_content
+            display: none
+            padding-top: 40px
+            +screen(m)
+                padding-top: 24px
+
+            &.opened
+                display: block
+
+        div.about
+            max-width: 1260px
+            font-weight: 400
+            font-size: 18px
+            line-height: 130%
+            color: $osnovnoy-chernyy
+            opacity: 0.8
+            +screen(m)
+                font-size: 12px
+
+            h3
+                margin-bottom: 20px
+
+        div.advantages
+            h3
+                margin-bottom: 40px
+                +screen(m)
+                    margin-bottom: 20px
+            strong
+                display: block
+                margin-top: 30px
+                margin-bottom: 10px
+                font-weight: 400
+                font-size: 16px
+                line-height: 130%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+                color: $dopolnitelnyy-alyy
+                +screen(m)
+                    font-size: 14px
+                    margin-top: 20px
+            p
+                font-weight: 400
+                font-size: 18px
+                line-height: 130%
+                color: $osnovnoy-chernyy
+                opacity: 0.8
+                +screen(m)
+                    font-size: 12px
+
+        div.applications
+            display: grid
+            grid-gap: 40px
+            +screen(m)
+                grid-gap: 20px
+
+            div.list
+                display: grid
+                grid-template-columns: repeat(3, 1fr)
+                grid-gap: 18px 20px
+                +screen(m)
+                    grid-template-columns: repeat(2, 1fr)
+                    grid-gap: 10px
+                +screen(s)
+                    grid-template-columns: 1fr
+
+                div
+                    display: grid
+                    align-items: center
+                    justify-items: center
+                    text-align: center
+                    border: 1px solid rgba(203, 30, 64, 0.3)
+                    border-radius: 5px
+                    min-height: 73px
+                    padding: 25px
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 130%
+                    color: $osnovnoy-chernyy
+                    +screen(m)
+                        font-size: 12px
+                        min-height: 44px
+                        padding: 14px
+
+
+
+

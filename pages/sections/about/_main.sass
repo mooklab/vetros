@@ -1,0 +1,100 @@
+section.main
+    margin-bottom: 80px
+    +screen(m)
+        margin-bottom: 60px
+
+    div.text
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 20px
+        margin-bottom: 40px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 12px
+            margin-bottom: 20px
+
+        span
+            font-weight: 400
+            font-size: 18px
+            line-height: 130%
+            color: $osnovnoy-chernyy
+            opacity: 0.8
+            +screen(m)
+                font-size: 12px
+
+    span.transparent
+        display: block
+        font-weight: 600
+        font-size: 90px
+        line-height: 107%
+        letter-spacing: 0.0098em
+        text-transform: uppercase
+        color: $osnovnoy-seryy
+        opacity: 0.2
+        margin-bottom: 10px
+        +screen(m)
+            font-size: 30px
+            margin-bottom: 30px
+
+    div.mission
+        position: relative
+        display: grid
+        align-items: center
+        width: 100%
+        height: 749px
+        +screen(s)
+            height: auto
+            grid-column: full
+
+        div.description
+            position: relative
+            display: grid
+            align-content: space-between
+            border-radius: 5px
+            width: 420px
+            height: 463px
+            background: $dopolnitelnyy-alyy
+            padding: 40px 30px
+            z-index: 1
+            +screen(m)
+                height: 209px
+                max-width: 375px
+                width: 100%
+            +screen(s)
+                max-width: unset
+
+            strong
+                font-weight: 400
+                font-size: 20px
+                line-height: 130%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+                color: $osnovnoy-belyy
+                +screen(m)
+                    font-size: 14px
+                    
+            span
+                font-weight: 400
+                font-size: 18px
+                line-height: 130%
+                color: $osnovnoy-belyy
+                opacity: 0.8
+                +screen(m)
+                    font-size: 12px
+
+        img
+            position: absolute
+            top: 0
+            left: 50%
+            width: 100vw
+            height: 100%
+            object-fit: cover
+            object-position: center center
+            transform: translateX(-50%)
+            +screen(s)
+                position: static
+                height: 364px
+                width: 100%
+                transform: unset
+                margin-top: -44px
+

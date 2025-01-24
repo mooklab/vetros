@@ -1,0 +1,157 @@
+section.products
+    margin-top: 133px
+    margin-bottom: 80px
+    +screen(m)
+        margin-top: 90px
+        margin-bottom: 60px
+
+    div.container
+        display: grid
+        grid-template-areas: 'Title Description' 'Product Gallery' '. Additional'
+        grid-template-columns: 5fr 7fr
+        grid-gap: 32px 20px
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-template-areas: 'Title' 'Description' 'Product' 'Gallery' 'Additional'
+            grid-gap: 0px
+
+    h2
+        grid-area: Title
+        +screen(m)
+            padding-bottom: 12px
+
+    span.description
+        grid-area: Description
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        color: $osnovnoy-chernyy
+        opacity: 0.8
+        +screen(m)
+            font-size: 12px
+
+    a.product
+        position: relative
+        grid-area: Product
+        display: grid
+        align-content: space-between
+        padding: 40px
+        border: 1px solid $osnovnoy-chernyy
+        border-radius: 5px
+        background: white
+        z-index: 1
+        +screen(m)
+            height: 245px
+            padding: 25px 20px
+            margin-top: 20px
+            margin-bottom: 20px
+
+        span
+            font-weight: 400
+            font-size: 20px
+            line-height: 130%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            color: $osnovnoy-chernyy
+            +screen(m)
+                font-size: 14px
+
+        img
+            position: absolute
+            right: 18px
+            bottom: 42px
+            width: 431px
+            max-width: 75%
+            +screen(m)
+                width: 199px
+                right: 0
+                bottom: 18px
+
+        div.arrow
+            position: relative
+            cursor: pointer
+            width: 52px
+            height: 52px
+            z-index: 1
+            +screen(m)
+                width: 40px
+                height: 40px
+
+            svg
+                width: 100%
+                height: 100%
+                transition: filter 0.3s
+                circle
+                    stroke: $osnovnoy-chernyy
+                    fill: transparent
+                path
+                    fill: $osnovnoy-chernyy
+
+        &:hover
+            border: 1px solid $dopolnitelnyy-alyy
+            div.arrow
+                svg
+                    transition: filter 0.3s
+                    circle
+                        stroke: $dopolnitelnyy-alyy
+                        fill: $dopolnitelnyy-alyy
+                    path
+                        fill: $osnovnoy-belyy
+
+
+    div.swiper
+        grid-area: Gallery
+        width: 100%
+        min-width: 0
+        height: 575px
+        padding-right: 220px
+        overflow: visible
+        z-index: 0
+        +screen(m)
+            height: 245px
+            padding-right: unset
+            margin-bottom: 10px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center center
+            border-radius: 5px
+
+        div.swiper-navigation
+            position: absolute
+            bottom: 0
+            left: calc(100% - 196px)
+            z-index: 1
+            +screen(m)
+                display: none
+
+        div.swiper-slide
+            opacity: 0
+            pointer-events: none
+            transition: all 0.3s
+            +screen(m)
+                transition: unset
+                opacity: 1
+            
+            &.swiper-slide-active
+                opacity: 1
+                pointer-events: auto
+
+                & ~ div.swiper-slide
+                    opacity: 1
+                    pointer-events: auto
+                    padding-bottom: 110px
+                    +screen(m)
+                        padding-bottom: unset
+
+    span.additional
+        grid-area: Additional
+        font-weight: 400
+        font-size: 16px
+        line-height: 130%
+        color: $osnovnoy-chernyy
+        opacity: 0.6
+        +screen(m)
+            font-size: 12px

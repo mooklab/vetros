@@ -1,0 +1,78 @@
+section.values
+    margin-top: 80px
+    margin-bottom: 60px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 30px
+    
+    h2
+        margin-bottom: 24px
+        +screen(m)
+            margin-bottom: 12px
+
+    div.advantages
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 20px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 10px
+
+        div.advantage
+            display: grid
+            grid-gap: 30px
+            align-content: space-between
+            border: 1px solid rgba(138, 141, 143, 0.3)
+            border-radius: 5px
+            padding: 20px 30px
+            min-height: 198px
+            +screen(m)
+                padding: 20px
+                min-height: 182px
+
+            strong
+                font-weight: 600
+                font-size: 20px
+                line-height: 130%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+                color: $osnovnoy-krasnyy
+                opacity: 0.8
+                +screen(m)
+                    font-size: 14px
+
+            span
+                position: relative
+                font-weight: 400
+                font-size: 18px
+                line-height: 130%
+                color: $osnovnoy-chernyy
+                opacity: 0.8
+                +screen(m)
+                    font-size: 12px
+
+                &::before
+                    content: ''
+                    display: block
+                    width: 70px
+                    height: 2px
+                    border-radius: 1px
+                    position: absolute
+                    top: -15px
+                    left: 0
+                    background: $dopolnitelnyy-serebro
+                    opacity: 0.3
+
+    span.transparent
+        display: block
+        font-weight: 600
+        font-size: 90px
+        line-height: 107%
+        letter-spacing: 0.0098em
+        text-transform: uppercase
+        color: $osnovnoy-seryy
+        opacity: 0.2
+        margin-top: 60px
+        +screen(m)
+            font-size: 30px
+            margin-top: 30px

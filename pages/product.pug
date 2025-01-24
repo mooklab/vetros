@@ -1,0 +1,11 @@
+extends common/pug/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/product.css")
+
+block content
+    include sections/product/_main.pug
+    include sections/product/_specs.pug
+    include sections/_consult.pug
+
+    style header{ background: #FBFBFB }

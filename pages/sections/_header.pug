@@ -1,0 +1,44 @@
+header
+    div.container
+
+        div(onclick="this.closest('header').classList.add('menu')").menu_open
+            img(src="images/menu.svg")
+        
+        div(onclick="this.closest('header').classList.remove('menu')").menu_close
+            img(src="images/cross.svg")
+        
+        a(href="index.html").logotype
+            img(src="images/logotype.svg", alt="Vetros")
+
+        menu
+            a(href="product.html") Продукция
+            a(href="about.html") О компании
+            a(href="contacts.html") Контакты
+            a(href="documents.html") документы
+
+        div.contacts
+            a(href="tel:79154448877").phone
+                img(src="images/phone.svg")
+                span +7 915 444-88-77
+            a(href="mailto:pochta@mail.com").email
+                img(src="images/email.svg")
+                span pochta@mail.com
+
+        button(data-modal-target="offer") Связаться с нами
+
+    div.modal_menu
+        menu
+            a(href="product.html") Продукция
+            a(href="about.html") О компании
+            a(href="contacts.html") Контакты
+            a(href="documents.html") документы
+
+        div.contacts
+            a(href="tel:79154448877").phone
+                img(src="images/phone.svg")
+                span +7 915 444-88-77
+            a(href="mailto:pochta@mail.com").email
+                img(src="images/email.svg")
+                span pochta@mail.com
+
+        button(data-modal-target="offer") Связаться с нами

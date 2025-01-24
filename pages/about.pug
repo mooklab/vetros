@@ -1,0 +1,9 @@
+extends common/pug/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/about.css")
+
+block content
+    include sections/about/_main.pug
+    include sections/about/_values.pug
+    include sections/about/_safety.pug

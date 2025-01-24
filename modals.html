@@ -1,0 +1,38 @@
+
+<dialog data-modal-name="offer">
+    <div class="container"><img class="close" src="images/modal_cross.svg" data-modal-close="data-modal-close"/>
+        <div class="wrap">
+            <div class="form">
+                <h2>Оставьте заявку и мы свяжемся с вами</h2>
+                <form action="" onsubmit="event.preventDefault(); this.reset(); this.closest('dialog').classList.add('success')">
+                    <div class="row">
+                        <fieldset class="input">
+                            <input type="text" placeholder="Ваше имя*" autocomplete="off" oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage" onclick="this.classList.remove('error')" required="required"/>
+                            <label>Ваше имя</label><span></span><img src="images/alert.svg" alt=""/>
+                        </fieldset>
+                        <fieldset class="input">
+                            <input type="tel" placeholder="Телефон" autocomplete="off" oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage" onclick="this.classList.remove('error')" required="required"/>
+                            <label>Телефон</label><span></span><img src="images/alert.svg" alt=""/>
+                        </fieldset>
+                        <fieldset class="input">
+                            <input type="email" placeholder="Ваш email" autocomplete="off" oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage" onclick="this.classList.remove('error')" required="required"/>
+                            <label>Ваш email</label><span></span><img src="images/alert.svg" alt=""/>
+                        </fieldset>
+                    </div>
+                    <div class="textarea">
+                        <textarea placeholder="Сообщение" rows="1" oninput="autosize(this)"></textarea>
+                    </div>
+                    <label class="upload"><img class="upload" src="images/upload.svg" alt=""/>
+                        <input type="file" name="" onchange="upload(this)"/><span class="name"></span><span class="default">Прикрепить файл</span><img class="cross" src="images/upload_cross.svg" alt="" onclick="resetUpload(event, this)"/>
+                    </label>
+                    <div class="submit">
+                        <button>Оставить заявку</button><span class="policy">Нажимая кнопку «Оставить заявку», я даю своё <a href="###">согласие на обработку моих персональных данных</a></span>
+                    </div>
+                </form>
+            </div>
+            <div class="success">
+                <h2>Заявка успешно <br/>оправлена!</h2><span>Мы свяжемся с вами в ближайшее время</span><a class="button" href="index.html">на главную</a>
+            </div>
+        </div>
+    </div>
+</dialog>

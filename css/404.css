@@ -1,0 +1,26 @@
+section.error {
+  margin-top: 90px;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.error {
+    margin-top: 115px;
+    margin-bottom: 115px;
+  }
+}
+section.error div.container {
+  display: grid;
+  justify-items: center;
+}
+section.error div.container img {
+  margin-bottom: 50px;
+}
+@media (max-width: 960px) {
+  section.error div.container img {
+    width: 265px;
+    margin-bottom: 26px;
+  }
+}
+section.error div.container h2 {
+  margin-bottom: 32px;
+}/*# sourceMappingURL=404.css.map */

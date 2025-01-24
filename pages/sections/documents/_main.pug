@@ -1,0 +1,38 @@
+mixin doc(title)
+    div.doc
+        a(href="images/empty.pdf", target="blank").preview
+            img(src="images/10.webp", alt="")
+        div.description
+            span Котлы ТТ100
+            a(href="images/empty.pdf", target="blank")
+                h3= title
+        div.file
+            img(src="images/pdf.svg", alt="")
+            span 600,53KB
+
+section.main
+
+    div.breadcrumbs
+        a(href="index.html") Главная
+        span О компании
+
+    div.text
+        h1 Документация
+        span ООО «ВСД» является российским производителем промышленных водогрейных котлов, котельного оборудования и запасных частей.
+
+    div.tabs
+        a(href="documents.html").active Сертификаты
+        a(href="documents.html") Лицензии
+
+    div.docs
+        +doc('Сертификат соответствия ТР ТС 032–2013')
+        +doc('Сертификат соответствия ТР ТС 032–2013')
+        +doc('Сертификат соответствия ТР ТС 032–2013')
+        +doc('Сертификат соответствия ТР ТС 032–2013')
+        +doc('Сертификат соответствия ТР ТС 032–2013')
+        +doc('Сертификат соответствия ТР ТС 032–2013')
+        +doc('Сертификат соответствия ТР ТС 032–2013')
+        +doc('Сертификат соответствия ТР ТС 032–2013')
+        +doc('Сертификат соответствия ТР ТС 032–2013')
+
+    a(href="documents.html").button.more загрузить еще

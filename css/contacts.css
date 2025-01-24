@@ -1,0 +1,215 @@
+section.main {
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.main {
+    margin-bottom: 21px;
+  }
+}
+section.main div.text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+@media (max-width: 960px) {
+  section.main div.text {
+    grid-template-columns: 1fr;
+  }
+}
+section.main div.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px 110px;
+}
+@media (max-width: 960px) {
+  section.main div.list {
+    grid-gap: 24px;
+  }
+}
+@media (max-width: 480px) {
+  section.main div.list {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+}
+section.main div.list div.contact {
+  display: grid;
+  grid-gap: 10px;
+}
+@media (max-width: 960px) {
+  section.main div.list div.contact {
+    grid-gap: 5px;
+  }
+}
+section.main div.list div.contact > *:first-child {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #8a8d8f;
+}
+@media (max-width: 960px) {
+  section.main div.list div.contact > *:first-child {
+    font-size: 12px;
+  }
+}
+section.main div.list div.contact > *:last-child {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: rgba(35, 31, 32, 0.8);
+  opacity: 0.8;
+}
+@media (max-width: 960px) {
+  section.main div.list div.contact > *:last-child {
+    font-size: 12px;
+  }
+}
+
+section.map div#map {
+  grid-column: full;
+  height: 635px;
+  width: 100%;
+}
+
+section.consult {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 80px;
+  background: #cb1e40;
+  color: white;
+}
+@media (max-width: 960px) {
+  section.consult {
+    padding-top: 25px;
+    padding-bottom: 32px;
+    margin-bottom: 60px;
+  }
+}
+section.consult h2 {
+  color: white;
+  margin-bottom: 43px;
+}
+@media (max-width: 960px) {
+  section.consult h2 {
+    margin-bottom: 20px;
+  }
+}
+section.consult form {
+  position: relative;
+  max-width: 1230px;
+  z-index: 1;
+}
+section.consult form div.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+@media (max-width: 960px) {
+  section.consult form div.row {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 640px) {
+  section.consult form div.row {
+    grid-template-columns: 1fr;
+  }
+}
+section.consult form fieldset.input {
+  color: white;
+}
+section.consult form fieldset.input input {
+  border-bottom: 1px solid white;
+}
+section.consult form fieldset.input label {
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+section.consult form fieldset.input label::after {
+  color: inherit;
+}
+section.consult form fieldset.input span {
+  background: #cb1e40;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+section.consult form fieldset.input svg circle {
+  fill: white;
+}
+section.consult form fieldset.input svg path {
+  stroke: #cb1e40;
+}
+section.consult form div.textarea {
+  margin-top: 20px;
+}
+section.consult form div.textarea textarea {
+  color: white;
+  border-bottom: 1px solid white;
+}
+section.consult form div.textarea textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+section.consult form div.textarea textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+section.consult form div.textarea textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+section.consult form div.textarea textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+section.consult form div.textarea textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+section.consult form div.textarea textarea:-moz-placeholder-shown {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+section.consult form div.textarea textarea:-ms-input-placeholder {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+section.consult form div.textarea textarea:placeholder-shown {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+section.consult form span.policy {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 36px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 640px) {
+  section.consult form span.policy {
+    margin-top: 10px;
+    margin-bottom: 24px;
+    font-size: 12px;
+  }
+}
+section.consult form span.policy a {
+  text-decoration: underline;
+}
+section.consult form span.policy a:hover {
+  text-decoration: none;
+}
+section.consult form button {
+  background: white;
+  color: #231f20;
+}
+section.consult form button:hover {
+  color: #cb1e40;
+}
+section.consult img.background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  z-index: 0;
+}
+@media (max-width: 960px) {
+  section.consult img.background {
+    height: 203px;
+    right: -64px;
+  }
+}/*# sourceMappingURL=contacts.css.map */

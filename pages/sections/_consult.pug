@@ -1,0 +1,50 @@
+section.consult
+    div.container
+        h2 Получить консультацию
+
+        form(action="", onsubmit="event.preventDefault(); this.reset(); this.closest('section.form').classList.add('success')")
+            div.row
+                fieldset.input
+                    input(
+                        type="text", 
+                        placeholder="Ваше имя*", 
+                        autocomplete="off", 
+                        oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", 
+                        onclick="this.classList.remove('error')",
+                        required
+                    )
+                    label Ваше имя
+                    span
+                    include ../../images/alert.svg
+                fieldset.input
+                    input(
+                        type="tel", 
+                        placeholder="Телефон", 
+                        autocomplete="off", 
+                        oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", 
+                        onclick="this.classList.remove('error')",
+                        required
+                    )
+                    label Телефон
+                    span
+                    include ../../images/alert.svg
+                fieldset.input
+                    input(
+                        type="email", 
+                        placeholder="Ваш email", 
+                        autocomplete="off", 
+                        oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", 
+                        onclick="this.classList.remove('error')",
+                        required
+                    )
+                    label Ваш email
+                    span
+                    include ../../images/alert.svg
+            div.textarea
+                textarea(placeholder="Сообщение", rows="1", oninput="autosize(this)")
+                //- label Сообщение
+                //- include ../../../images/textarea.svg
+            span.policy Нажимая кнопку «Оставить заявку», я даю своё #[a(href="###") согласие на обработку моих персональных данных]
+            button Оставить заявку
+
+        img(src="images/offer_background.svg", alt=" ").background

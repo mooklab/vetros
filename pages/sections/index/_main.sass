@@ -1,0 +1,70 @@
+section.main
+    margin-top: 35px
+    margin-bottom: 133px
+    +screen(m)
+        margin-bottom: 90px
+
+    div.container
+        position: relative
+
+    div.swiper-slide
+        display: grid
+        grid-template-columns: 734fr 856fr
+        grid-gap: 56px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 22px
+
+        div.text
+            padding-top: 95px
+            padding-bottom: 95px
+            +screen(s)
+                padding-top: unset
+                padding-bottom: unset
+
+            h1
+                margin-bottom: 24px
+                font-weight: 400
+                font-size: 48px
+                line-height: 107%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+                color: $osnovnoy-chernyy
+                +screen(m)
+                    font-size: 20px
+                    margin-bottom: 16px
+                    
+            span
+                display: block
+                margin-bottom: 32px
+                font-size: 20px
+                line-height: 130%
+                color: $osnovnoy-chernyy
+                opacity: 0.8
+                +screen(m)
+                    font-size: 12px
+                    margin-bottom: 24px
+            
+            a.button
+                padding: 20px 40px
+                justify-self: start
+                +screen(m)
+                    border: 1px solid $dopolnitelnyy-alyy
+                    padding: 14px 32px
+
+        div.image
+            img
+                width: 100%
+                +screen(s)
+                    width: calc(100% + 40px)
+                    margin-left: -20px
+
+    div.swiper-navigation
+        position: absolute
+        left: 0
+        bottom: 0
+        z-index: 1
+        +screen(s)
+            bottom: 8px
+            left: unset
+            right: 0

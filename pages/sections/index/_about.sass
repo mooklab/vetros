@@ -1,0 +1,111 @@
+section.about
+    margin-top: 74px
+    margin-bottom: 80px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+
+    div.container
+        display: grid
+        grid-gap: 62px
+        +screen(m)
+            grid-gap: 30px
+
+    div.text
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 20px
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-gap: 12px
+
+        div.description
+            display: grid
+            justify-items: start
+            grid-gap: 26px
+            +screen(m)
+                grid-gap: 20px
+
+            span
+                font-weight: 400
+                font-size: 18px
+                line-height: 130%
+                color: $osnovnoy-chernyy
+                opacity: 0.8
+                +screen(m)
+                    font-size: 12px
+
+    div.advantages
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 20px
+        +screen(s)
+            grid-template-columns: 1fr        
+
+        div.advantage
+            display: grid
+            align-content: space-between
+            border: 1px solid rgba(138, 141, 143, 0.3)
+            border-radius: 5px
+            height: 234px
+            padding: 30px 40px
+            +screen(m)
+                height: 178px
+                padding: 20px 30px
+
+            &:first-child
+                background: $dopolnitelnyy-alyy
+                background-image: url(../images/offer_background.svg)
+                background-repeat: no-repeat
+                background-position: top right
+                background-size: contain
+                strong
+                    color: white
+                    opacity: 1
+                span
+                    color: white
+                    &::before
+                        background: rgba(255, 255, 255, 0.41)
+                        opacity: 0.7
+
+        strong
+            display: block
+            font-weight: 600
+            font-size: 64px
+            line-height: 107%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            color: $osnovnoy-chernyy
+            opacity: 0.8
+            +screen(m)
+                font-size: 40px
+
+        span
+            position: relative
+            font-weight: 400
+            font-size: 18px
+            line-height: 130%
+            color: $osnovnoy-chernyy
+            opacity: 0.8
+            +screen(m)
+                font-size: 12px
+
+            &::before
+                content: ''
+                display: block
+                width: 70px
+                height: 2px
+                border-radius: 1px
+                position: absolute
+                top: -15px
+                left: 0
+                background: $dopolnitelnyy-serebro
+                opacity: 0.3
+
+
+
+
+
+
+
+
