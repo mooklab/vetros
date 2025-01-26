@@ -346,53 +346,53 @@ section.offer {
     padding-bottom: 32px;
   }
 }
-section.offer h2 {
+section.offer div.container h2 {
   color: white;
   margin-bottom: 43px;
 }
 @media (max-width: 960px) {
-  section.offer h2 {
+  section.offer div.container h2 {
     margin-bottom: 29px;
   }
 }
-section.offer form {
+section.offer div.container form {
   max-width: 1230px;
 }
-section.offer form div.row {
+section.offer div.container form div.row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
 @media (max-width: 640px) {
-  section.offer form div.row {
+  section.offer div.container form div.row {
     grid-template-columns: 1fr;
   }
 }
-section.offer form fieldset.input {
+section.offer div.container form fieldset.input {
   color: white;
 }
-section.offer form fieldset.input input {
+section.offer div.container form fieldset.input input {
   border-bottom: 1px solid white;
 }
-section.offer form fieldset.input label {
+section.offer div.container form fieldset.input label {
   color: rgba(255, 255, 255, 0.6);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-section.offer form fieldset.input label::after {
+section.offer div.container form fieldset.input label::after {
   color: inherit;
 }
-section.offer form fieldset.input span {
+section.offer div.container form fieldset.input span {
   background: #cb1e40;
   color: rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-section.offer form fieldset.input svg circle {
+section.offer div.container form fieldset.input svg circle {
   fill: white;
 }
-section.offer form fieldset.input svg path {
+section.offer div.container form fieldset.input svg path {
   stroke: #cb1e40;
 }
-section.offer form span.policy {
+section.offer div.container form span.policy {
   display: block;
   margin-top: 24px;
   margin-bottom: 36px;
@@ -402,26 +402,27 @@ section.offer form span.policy {
   color: rgba(255, 255, 255, 0.7);
 }
 @media (max-width: 640px) {
-  section.offer form span.policy {
+  section.offer div.container form span.policy {
     margin-top: 20px;
     margin-bottom: 32px;
     font-size: 12px;
   }
 }
-section.offer form span.policy a {
+section.offer div.container form span.policy a {
   text-decoration: underline;
 }
-section.offer form span.policy a:hover {
+section.offer div.container form span.policy a:hover {
   text-decoration: none;
 }
-section.offer form button {
+section.offer div.container form button {
   background: white;
   color: #231f20;
 }
-section.offer form button:hover {
+section.offer div.container form button:hover {
   color: #cb1e40;
 }
 section.offer img.background {
+  grid-column: full;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -432,6 +433,102 @@ section.offer img.background {
     height: 203px;
     right: -64px;
   }
+}
+section.offer div.success {
+  opacity: 0;
+  pointer-events: none;
+  display: grid;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 87px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 960px) {
+  section.offer div.success {
+    padding-top: 25px;
+    padding-bottom: 42px;
+  }
+}
+section.offer div.success div.text {
+  display: grid;
+  grid-gap: 15px;
+}
+@media (max-width: 960px) {
+  section.offer div.success div.text {
+    grid-gap: 12px;
+  }
+}
+section.offer div.success div.text h2 {
+  color: white;
+}
+section.offer div.success div.text span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #fff;
+  opacity: 0.8;
+}
+@media (max-width: 960px) {
+  section.offer div.success div.text span {
+    font-size: 12px;
+  }
+}
+section.offer div.success div.contact {
+  display: grid;
+}
+section.offer div.success div.contact span {
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #fff;
+  margin-bottom: 20px;
+}
+@media (max-width: 960px) {
+  section.offer div.success div.contact span {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+section.offer div.success div.contact a.phone {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media (max-width: 960px) {
+  section.offer div.success div.contact a.phone {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+}
+section.offer div.success div.contact a.email {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media (max-width: 960px) {
+  section.offer div.success div.contact a.email {
+    font-size: 12px;
+  }
+}
+section.offer.success div.container {
+  opacity: 0;
+  pointer-events: none;
+}
+section.offer.success div.success {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 section.about {

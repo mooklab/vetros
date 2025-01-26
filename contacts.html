@@ -69,7 +69,7 @@
             <section class="consult">
                 <div class="container">
                     <h2>Получить консультацию</h2>
-                    <form action="" onsubmit="event.preventDefault(); this.reset(); this.closest('section.form').classList.add('success')">
+                    <form action="" onsubmit="event.preventDefault(); this.reset(); this.closest('section').classList.add('success')">
                         <div class="row">
                             <fieldset class="input">
                                 <input type="text" placeholder="Ваше имя*" autocomplete="off" oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage" onclick="this.classList.remove('error')" required>
@@ -100,7 +100,13 @@
                             <textarea placeholder="Сообщение" rows="1" oninput="autosize(this)"></textarea>
                         </div><span class="policy">Нажимая кнопку «Оставить заявку», я даю своё <a href="###">согласие на обработку моих персональных данных</a></span>
                         <button>Оставить заявку</button>
-                    </form><img class="background" src="images/offer_background.svg" alt=" ">
+                    </form>
+                </div><img class="background" src="images/offer_background.svg" alt=" ">
+                <div class="success">
+                    <div class="text">
+                        <h2>заявка успешно отправлена!</h2><span>Наш менеджер скоро с вами свяжется.</span>
+                    </div>
+                    <div class="contact"><span>Если остались вопросы, свяжитесь с нами:</span><a class="phone" href="tel:+7 915 444-88-77">+7 915 444-88-77</a><a class="email" href="mailto:pochta@mail.com">pochta@mail.com</a></div>
                 </div>
             </section>
         </main>

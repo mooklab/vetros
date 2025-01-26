@@ -2,7 +2,7 @@ section.offer
     div.container
         h2 Получить коммерческое предложение
 
-        form
+        form(action="", onsubmit="event.preventDefault(); this.reset(); this.closest('section').classList.add('success')")
             div.row
                 fieldset.input
                     input(
@@ -31,4 +31,13 @@ section.offer
             span.policy Нажимая кнопку «Оставить заявку», я даю своё #[a(href="###") согласие на обработку моих персональных данных]
             button Оставить заявку
 
-        img(src="images/offer_background.svg", alt=" ").background
+    img(src="images/offer_background.svg", alt=" ").background
+
+    div.success
+        div.text
+            h2 заявка успешно отправлена!
+            span Наш менеджер скоро с вами свяжется.
+        div.contact
+            span Если остались вопросы, свяжитесь с нами:
+            a(href="tel:+7 915 444-88-77").phone +7 915 444-88-77
+            a(href="mailto:pochta@mail.com").email pochta@mail.com
