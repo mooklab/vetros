@@ -29,7 +29,7 @@ dialog[data-modal-name=offer]
         height: 100%
         background: white
         padding: 60px 50px
-        background-image: url(../images/modal.webp)
+        // background-image: url(../images/modal.webp)
         background-size: cover
         background-position: center right
         background-repeat: no-repeat
@@ -75,6 +75,7 @@ dialog[data-modal-name=offer]
                     line-height: 140%
                     color: $osnovnoy-chernyy
                     opacity: 0.8
+                    max-width: 360px
                     +screen(m)
                         font-size: 12px
 
@@ -82,6 +83,9 @@ dialog[data-modal-name=offer]
                         text-decoration: underline
                         &:hover
                             color: #6A6A6A
+
+                button
+                    min-width: 194px
 
     div.success
         display: grid
@@ -111,7 +115,12 @@ dialog[data-modal-name=offer]
                 font-size: 12px
                 margin-bottom: 16px
 
+        a.button
+            min-width: 194px
+
     &.success
+        div.container
+            background-image: url(../images/modal.webp)
         div.form
             opacity: 0
             pointer-events: none

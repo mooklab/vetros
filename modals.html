@@ -7,7 +7,7 @@
                 <form action="" onsubmit="event.preventDefault(); this.reset(); this.closest('dialog').classList.add('success')">
                     <div class="row">
                         <fieldset class="input">
-                            <input type="text" placeholder="Ваше имя*" autocomplete="off" oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage" onclick="this.classList.remove('error')" required="required"/>
+                            <input type="text" placeholder="Ваше имя*" autocomplete="off" oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage" onclick="this.classList.remove('error')" minlength="2" required="required"/>
                             <label>Ваше имя</label><span></span><img src="images/alert.svg" alt=""/>
                         </fieldset>
                         <fieldset class="input">
@@ -26,7 +26,7 @@
                         <input type="file" name="" onchange="upload(this)"/><span class="name"></span><span class="default">Прикрепить файл</span><img class="cross" src="images/upload_cross.svg" alt="" onclick="resetUpload(event, this)"/>
                     </label>
                     <div class="submit">
-                        <button>Оставить заявку</button><span class="policy">Нажимая кнопку «Оставить заявку», я даю своё <a href="###">согласие на обработку моих персональных данных</a></span>
+                        <button>Оставить заявку</button><span class="policy">Нажимая кнопку «Оставить заявку», я даю своё согласие на <a href="###">обработку моих персональных данных</a></span>
                     </div>
                 </form>
             </div>

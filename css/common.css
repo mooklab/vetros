@@ -341,7 +341,7 @@ fieldset.input input:placeholder-shown + label {
   display: block;
 }
 fieldset.input input[required] + label::after {
-  content: " *";
+  content: "*";
   color: #cb1e40;
 }
 fieldset.input input.error ~ span {
@@ -428,8 +428,13 @@ label.upload img.cross {
 }
 label.upload span {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   color: rgba(35, 31, 32, 0.8);
+}
+@media (max-width: 960px) {
+  label.upload span {
+    font-size: 12px;
+  }
 }
 label.upload span.name {
   display: none;
@@ -610,7 +615,6 @@ dialog[data-modal-name=offer] div.container {
   height: 100%;
   background: white;
   padding: 60px 50px;
-  background-image: url(../images/modal.webp);
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -669,6 +673,7 @@ dialog[data-modal-name=offer] div.form form div.submit span {
   line-height: 140%;
   color: #231f20;
   opacity: 0.8;
+  max-width: 360px;
 }
 @media (max-width: 960px) {
   dialog[data-modal-name=offer] div.form form div.submit span {
@@ -680,6 +685,9 @@ dialog[data-modal-name=offer] div.form form div.submit span a {
 }
 dialog[data-modal-name=offer] div.form form div.submit span a:hover {
   color: #6A6A6A;
+}
+dialog[data-modal-name=offer] div.form form div.submit button {
+  min-width: 194px;
 }
 dialog[data-modal-name=offer] div.success {
   display: grid;
@@ -715,6 +723,12 @@ dialog[data-modal-name=offer] div.success span {
     font-size: 12px;
     margin-bottom: 16px;
   }
+}
+dialog[data-modal-name=offer] div.success a.button {
+  min-width: 194px;
+}
+dialog[data-modal-name=offer].success div.container {
+  background-image: url(../images/modal.webp);
 }
 dialog[data-modal-name=offer].success div.form {
   opacity: 0;
@@ -863,6 +877,9 @@ footer div.top div.contacts div.links a {
 }
 footer div.top div.contacts div.links a:hover {
   text-decoration: none;
+}
+footer div.top button {
+  min-width: 191px;
 }
 footer div.bottom {
   display: grid;
@@ -1146,6 +1163,9 @@ header div.modal_menu div.contacts a.email span {
 header div.modal_menu div.contacts a.phone span:hover,
 header div.modal_menu div.contacts a.email span:hover {
   text-decoration: none;
+}
+header div.modal_menu button {
+  min-width: 201px;
 }
 header.menu div.container div.menu_open {
   display: none;

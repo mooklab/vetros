@@ -110,6 +110,7 @@ section.main div.mission div.description span {
 @media (max-width: 960px) {
   section.main div.mission div.description span {
     font-size: 12px;
+    max-width: 253px;
   }
 }
 section.main div.mission img {

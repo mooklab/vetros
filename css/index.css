@@ -46,6 +46,11 @@ section.main div.swiper-slide div.text h1 {
     margin-bottom: 16px;
   }
 }
+section.main div.swiper-slide div.text h1 b {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
 section.main div.swiper-slide div.text span {
   display: block;
   margin-bottom: 32px;
@@ -131,6 +136,7 @@ section.products span.description {
   line-height: 130%;
   color: #231f20;
   opacity: 0.8;
+  max-width: 804px;
 }
 @media (max-width: 960px) {
   section.products span.description {
@@ -298,6 +304,7 @@ section.products span.additional {
   line-height: 130%;
   color: #231f20;
   opacity: 0.6;
+  max-width: 827px;
 }
 @media (max-width: 960px) {
   section.products span.additional {
@@ -390,7 +397,7 @@ section.offer div.container form fieldset.input svg circle {
   fill: white;
 }
 section.offer div.container form fieldset.input svg path {
-  stroke: #cb1e40;
+  fill: #cb1e40;
 }
 section.offer div.container form span.policy {
   display: block;
@@ -417,6 +424,7 @@ section.offer div.container form span.policy a:hover {
 section.offer div.container form button {
   background: white;
   color: #231f20;
+  min-width: 194px;
 }
 section.offer div.container form button:hover {
   color: #cb1e40;
@@ -565,6 +573,7 @@ section.about div.text div.description {
   display: grid;
   justify-items: start;
   grid-gap: 26px;
+  max-width: 775px;
 }
 @media (max-width: 960px) {
   section.about div.text div.description {
@@ -703,6 +712,7 @@ section.trust div.text span {
   line-height: 130%;
   color: #231f20;
   opacity: 0.8;
+  max-width: 568px;
 }
 @media (max-width: 960px) {
   section.trust div.text span {

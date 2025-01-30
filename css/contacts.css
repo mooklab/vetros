@@ -138,7 +138,7 @@ section.consult div.container form fieldset.input svg circle {
   fill: white;
 }
 section.consult div.container form fieldset.input svg path {
-  stroke: #cb1e40;
+  fill: #cb1e40;
 }
 section.consult div.container form div.textarea {
   margin-top: 20px;

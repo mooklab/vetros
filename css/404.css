@@ -23,4 +23,12 @@ section.error div.container img {
 }
 section.error div.container h2 {
   margin-bottom: 32px;
+}
+section.error div.container a.button {
+  min-width: 156px;
+}
+@media (max-width: 960px) {
+  section.error div.container a.button {
+    width: 100%;
+  }
 }/*# sourceMappingURL=404.css.map */

@@ -29,6 +29,7 @@ section.main div.text span {
   line-height: 130%;
   color: #231f20;
   opacity: 0.8;
+  max-width: 575px;
 }
 @media (max-width: 960px) {
   section.main div.text span {
