@@ -61,6 +61,12 @@ function autosize (element) {
     element.style.height = (element.scrollHeight + 2) + "px"
 }
 
+const validate = (event) => {
+    const value = event.which
+    console.log(value)
+    value >= 1072 && value <= 1103 || value == 32 || value == 32 || value == 39 ? console.log(value) : event.preventDefault()
+}
+
 const upload = (element) => {
     file = element.files[0]
     console.log(element.files)

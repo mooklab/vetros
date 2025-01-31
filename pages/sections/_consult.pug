@@ -11,7 +11,9 @@ section.consult
                         autocomplete="off", 
                         oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", 
                         onclick="this.classList.remove('error')",
-                        minlength="2"
+                        onkeypress="validate(event)", 
+                        minlength="2",
+                        pattern="[А-Яа-яЁё ]+",
                         required
                     )
                     label Ваше имя

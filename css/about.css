@@ -80,6 +80,7 @@ section.main div.mission div.description {
     height: 209px;
     max-width: 375px;
     width: 100%;
+    padding: 20px;
   }
 }
 @media (max-width: 640px) {

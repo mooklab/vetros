@@ -15,7 +15,16 @@ dialog(data-modal-name="offer")
                 
                     div.row
                         fieldset.input
-                            input(type="text", placeholder="Ваше имя*", autocomplete="off", oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", onclick="this.classList.remove('error')", minlength="2", required)
+                            input(
+                                type="text", 
+                                placeholder="Ваше имя*", 
+                                autocomplete="off", 
+                                oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", 
+                                onclick="this.classList.remove('error')", 
+                                onkeypress="validate(event)", 
+                                minlength="2", 
+                                required
+                            )
                             label Ваше имя
                             span
                             img(src="images/alert.svg", alt="")
