@@ -597,6 +597,7 @@ dialog[data-modal-name=offer] img.close {
   right: 30px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  z-index: 9;
 }
 @media (max-width: 960px) {
   dialog[data-modal-name=offer] img.close {
@@ -1019,7 +1020,7 @@ header div.container a.logotype {
 }
 @media (max-width: 640px) {
   header div.container a.logotype {
-    margin-right: -20px;
+    margin-right: -40px;
   }
 }
 header div.container a.logotype img {
