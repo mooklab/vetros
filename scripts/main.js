@@ -52,25 +52,40 @@ new Swiper('section.trust div.swiper', {
     }
 })
 
-textareas = document.querySelectorAll('textarea').forEach( textarea => {
+textareas = document.querySelectorAll('textarea').forEach(textarea => {
     autosize(textarea)
 })
 
-function autosize (element) {
+function autosize(element) {
     element.style.height = 'auto'
     element.style.height = (element.scrollHeight + 2) + "px"
 }
 
-const validate = (event) => {
-    const value = event.which
-    console.log(value)
-    value >= 1072 && value <= 1103 || value == 32 || value == 32 || value == 39 ? console.log(value) : event.preventDefault()
+const validateCyr = (element, event) => {
+    element.value = element.value.replace(/[^а-яА-ЯёЁ]/g, '')
+}
+const validateLat = (element, event) => {
+    element.value = element.value.replace(/[^a-zA-Z0-9\s\.,!@?-]/g, '');
+}
+
+const validateEmail = (form, event) => {
+    emailInput = form.querySelector('input[type=email')
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$/
+    if (re.test(emailInput.value)) {
+        form.reset()
+        form.closest('dialog').classList.add('success')
+    } else {
+        console.log('error')
+        console.log(emailInput)
+        emailInput.classList.add('error')
+        emailInput.closest('fieldset').querySelector('span').textContent = 'В E-mail адресе не хватает точки'
+    }
 }
 
 const upload = (element) => {
     file = element.files[0]
     console.log(element.files)
-    if( file ) {
+    if (file) {
         element.nextElementSibling.innerHTML = element.files[0].name
         element.parentNode.classList.add("added")
     } else {

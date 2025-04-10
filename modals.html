@@ -4,10 +4,10 @@
         <div class="wrap">
             <div class="form">
                 <h2>Оставьте заявку и мы свяжемся с вами</h2>
-                <form action="" onsubmit="event.preventDefault(); this.reset(); this.closest('dialog').classList.add('success')">
+                <form action="" onsubmit="event.preventDefault(); validateEmail(this, event);">
                     <div class="row">
                         <fieldset class="input">
-                            <input type="text" placeholder="Ваше имя*" autocomplete="off" oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage" onclick="this.classList.remove('error')" onkeypress="validate(event)" minlength="2" required="required"/>
+                            <input type="text" placeholder="Ваше имя*" autocomplete="off" oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage" onclick="this.classList.remove('error')" onkeyup="validateCyr(this, event)" minlength="2" required="required"/>
                             <label>Ваше имя</label><span></span><img src="images/alert.svg" alt=""/>
                         </fieldset>
                         <fieldset class="input">
@@ -15,7 +15,7 @@
                             <label>Телефон</label><span></span><img src="images/alert.svg" alt=""/>
                         </fieldset>
                         <fieldset class="input">
-                            <input type="email" placeholder="Ваш email" autocomplete="off" oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage" onclick="this.classList.remove('error')" required="required"/>
+                            <input type="email" placeholder="Ваш email" autocomplete="off" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,10}" oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage" onclick="this.classList.remove('error')" onkeyup="validateLat(this, event)" required="required"/>
                             <label>Ваш email</label><span></span><img src="images/alert.svg" alt=""/>
                         </fieldset>
                     </div>

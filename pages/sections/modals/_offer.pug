@@ -11,7 +11,7 @@ dialog(data-modal-name="offer")
 
                 h2 Оставьте заявку и мы свяжемся с вами
 
-                form(action="", onsubmit="event.preventDefault(); this.reset(); this.closest('dialog').classList.add('success')")
+                form(action="", onsubmit="event.preventDefault(); validateEmail(this, event);")
                 
                     div.row
                         fieldset.input
@@ -21,7 +21,7 @@ dialog(data-modal-name="offer")
                                 autocomplete="off", 
                                 oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", 
                                 onclick="this.classList.remove('error')", 
-                                onkeypress="validate(event)", 
+                                onkeyup="validateCyr(this, event)", 
                                 minlength="2", 
                                 required
                             )
@@ -30,13 +30,27 @@ dialog(data-modal-name="offer")
                             img(src="images/alert.svg", alt="")
 
                         fieldset.input
-                            input(type="tel", placeholder="Телефон", autocomplete="off", oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", onclick="this.classList.remove('error')", required)
+                            input(
+                                type="tel", 
+                                placeholder="Телефон", 
+                                autocomplete="off", 
+                                oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", onclick="this.classList.remove('error')", 
+                                required
+                            )
                             label Телефон
                             span
                             img(src="images/alert.svg", alt="")
 
                         fieldset.input
-                            input(type="email", placeholder="Ваш email", autocomplete="off", oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", onclick="this.classList.remove('error')", required)
+                            input(
+                                type="email", 
+                                placeholder="Ваш email", 
+                                autocomplete="off", 
+                                pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}",
+                                oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", onclick="this.classList.remove('error')",
+                                onkeyup="validateLat(this, event)",
+                                required
+                            )
                             label Ваш email
                             span
                             img(src="images/alert.svg", alt="")
