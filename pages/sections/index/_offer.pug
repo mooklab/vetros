@@ -2,7 +2,7 @@ section.offer
     div.container
         h2 Получить коммерческое предложение
 
-        form(action="", onsubmit="event.preventDefault(); this.reset(); this.closest('section').classList.add('success')")
+        form(action="", onsubmit="event.preventDefault(); validateEmail(this, event);")
             div.row
                 fieldset.input
                     input(
@@ -23,6 +23,8 @@ section.offer
                         autocomplete="off", 
                         oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", 
                         onclick="this.classList.remove('error')",
+                        pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}",
+                        onkeyup="validateLat(this, event)",
                         required
                     )
                     label Ваш email

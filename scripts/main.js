@@ -75,8 +75,6 @@ const validateEmail = (form, event) => {
         form.reset()
         form.closest('dialog').classList.add('success')
     } else {
-        console.log('error')
-        console.log(emailInput)
         emailInput.classList.add('error')
         emailInput.closest('fieldset').querySelector('span').textContent = 'В E-mail адресе не хватает точки'
     }

@@ -2,7 +2,7 @@ section.consult
     div.container
         h2 Получить консультацию
 
-        form(action="", onsubmit="event.preventDefault(); this.reset(); this.closest('section').classList.add('success')")
+        form(action="", onsubmit="event.preventDefault(); validateEmail(this, event);")
             div.row
                 fieldset.input
                     input(
@@ -11,7 +11,7 @@ section.consult
                         autocomplete="off", 
                         oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", 
                         onclick="this.classList.remove('error')",
-                        onkeypress="validate(event)", 
+                        onkeyup="validateCyr(this, event)", 
                         minlength="2",
                         pattern="[А-Яа-яЁё ]+",
                         required
@@ -38,6 +38,8 @@ section.consult
                         autocomplete="off", 
                         oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", 
                         onclick="this.classList.remove('error')",
+                        pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}",
+                        onkeyup="validateLat(this, event)",
                         required
                     )
                     label Ваш email

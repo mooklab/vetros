@@ -46,8 +46,8 @@ dialog(data-modal-name="offer")
                                 type="email", 
                                 placeholder="Ваш email", 
                                 autocomplete="off", 
-                                pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}",
                                 oninvalid="event.preventDefault(); this.classList.add('error'); this.nextElementSibling.nextElementSibling.textContent = this.validationMessage", onclick="this.classList.remove('error')",
+                                pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}",
                                 onkeyup="validateLat(this, event)",
                                 required
                             )
