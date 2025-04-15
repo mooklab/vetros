@@ -1,8 +1,8 @@
 
 new Swiper('section.main div.swiper', {
-    autoplay: {
-        delay: 3000
-    },
+    // autoplay: {
+    //     delay: 3000
+    // },
     navigation: {
         prevEl: 'section.main div.swiper-navigation div.arrow:first-child',
         nextEl: 'section.main div.swiper-navigation div.arrow:last-child',

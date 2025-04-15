@@ -10,20 +10,29 @@ section.main {
 section.main div.container {
   position: relative;
 }
+@media (max-width: 640px) {
+  section.main div.container {
+    grid-column: full;
+  }
+}
 section.main div.swiper-slide {
   display: grid;
   grid-template-columns: 734fr 856fr;
   grid-gap: 56px;
+  overflow: hidden;
 }
 @media (max-width: 640px) {
   section.main div.swiper-slide {
     grid-template-columns: 1fr;
     grid-gap: 22px;
+    padding-left: var(--gap);
+    padding-right: var(--gap);
   }
 }
 section.main div.swiper-slide div.text {
   padding-top: 95px;
   padding-bottom: 95px;
+  z-index: 1;
 }
 @media (max-width: 640px) {
   section.main div.swiper-slide div.text {
@@ -75,6 +84,10 @@ section.main div.swiper-slide div.text a.button {
     padding: 14px 32px;
   }
 }
+section.main div.swiper-slide div.image {
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
 section.main div.swiper-slide div.image img {
   width: 100%;
 }
@@ -83,6 +96,32 @@ section.main div.swiper-slide div.image img {
     width: calc(100% + 40px);
     margin-left: -20px;
   }
+}
+section.main div.swiper-slide div.background {
+  display: none;
+  position: absolute;
+  top: calc(var(--gap) * -1);
+  left: 0;
+  width: 100%;
+  height: calc(100% + var(--gap) * 2);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  z-index: 0;
+}
+@media (max-width: 640px) {
+  section.main div.swiper-slide div.background {
+    display: block;
+  }
+}
+section.main div.swiper-slide div.background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 section.main div.swiper-navigation {
   position: absolute;
@@ -94,7 +133,7 @@ section.main div.swiper-navigation {
   section.main div.swiper-navigation {
     bottom: 8px;
     left: unset;
-    right: 0;
+    right: var(--gap);
   }
 }
 
@@ -110,7 +149,7 @@ section.products {
 }
 section.products div.container {
   display: grid;
-  grid-template-areas: "Title Description" "Product Gallery" ". Additional";
+  grid-template-areas: "Title Description" "Product Gallery" ".Additional";
   grid-template-columns: 5fr 7fr;
   grid-gap: 32px 20px;
 }
@@ -150,6 +189,7 @@ section.products a.product {
   -ms-flex-line-pack: justify;
       align-content: space-between;
   padding: 40px;
+  min-height: 575px;
   border: 1px solid #231f20;
   border-radius: 5px;
   background: white;
@@ -157,7 +197,7 @@ section.products a.product {
 }
 @media (max-width: 960px) {
   section.products a.product {
-    height: 245px;
+    min-height: 245px;
     padding: 25px 20px;
     margin-top: 20px;
     margin-bottom: 20px;

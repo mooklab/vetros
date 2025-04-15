@@ -24,7 +24,7 @@ section.main
             +screen(m)
                 font-size: 12px
 
-    div.tabs
+    div.tabs_captions
         display: grid
         grid-auto-flow: column
         grid-auto-columns: max-content
@@ -55,13 +55,17 @@ section.main
                 width: 100%
             &:hover
                 background: rgba(235, 37, 76, 0.1)
-            &.active
+            &.opened
                 pointer-events: none
                 color: $osnovnoy-belyy
                 background: $dopolnitelnyy-alyy
-                
 
-    div.docs
+    div.tab_content
+        display: none
+        &.opened
+            display: grid
+
+    div.list
         display: grid
         grid-template-columns: repeat(3, 1fr)
         grid-gap: 57px 20px
@@ -87,7 +91,6 @@ section.main
             padding: 10px 12px
             padding-left: calc(119px + 15px + 12px)
             min-height: 162px
-
 
         a.preview
             position: absolute
@@ -132,7 +135,6 @@ section.main
             &:hover
                 &::before, &::after
                     display: block
-                    
 
         div.description
             display: grid
@@ -187,7 +189,7 @@ section.main
         color: $dopolnitelnyy-alyy
         &:hover
             background: rgba(235, 37, 76, 0.1)
-            
+
         +screen(s)
             width: 100%
             margin-top: 20px

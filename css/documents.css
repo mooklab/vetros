@@ -36,7 +36,7 @@ section.main div.text span {
     font-size: 12px;
   }
 }
-section.main div.tabs {
+section.main div.tabs_captions {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: -webkit-max-content;
@@ -45,17 +45,17 @@ section.main div.tabs {
   margin-bottom: 87px;
 }
 @media (max-width: 960px) {
-  section.main div.tabs {
+  section.main div.tabs_captions {
     margin-bottom: 46px;
   }
 }
 @media (max-width: 640px) {
-  section.main div.tabs {
+  section.main div.tabs_captions {
     grid-auto-columns: 1fr;
     grid-gap: 11px;
   }
 }
-section.main div.tabs a {
+section.main div.tabs_captions a {
   display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -73,40 +73,46 @@ section.main div.tabs a {
   color: #cb1e40;
 }
 @media (max-width: 960px) {
-  section.main div.tabs a {
+  section.main div.tabs_captions a {
     font-size: 12px;
   }
 }
 @media (max-width: 640px) {
-  section.main div.tabs a {
+  section.main div.tabs_captions a {
     width: 100%;
   }
 }
-section.main div.tabs a:hover {
+section.main div.tabs_captions a:hover {
   background: rgba(235, 37, 76, 0.1);
 }
-section.main div.tabs a.active {
+section.main div.tabs_captions a.opened {
   pointer-events: none;
   color: #fff;
   background: #cb1e40;
 }
-section.main div.docs {
+section.main div.tab_content {
+  display: none;
+}
+section.main div.tab_content.opened {
+  display: grid;
+}
+section.main div.list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 57px 20px;
 }
 @media (max-width: 1280px) {
-  section.main div.docs {
+  section.main div.list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 960px) {
-  section.main div.docs {
+  section.main div.list {
     grid-gap: 28px 20px;
   }
 }
 @media (max-width: 640px) {
-  section.main div.docs {
+  section.main div.list {
     grid-template-columns: 1fr;
   }
 }

@@ -6,18 +6,24 @@ section.main
 
     div.container
         position: relative
+        +screen(s)
+            grid-column: full
 
     div.swiper-slide
         display: grid
         grid-template-columns: 734fr 856fr
         grid-gap: 56px
+        overflow: hidden
         +screen(s)
             grid-template-columns: 1fr
             grid-gap: 22px
+            padding-left: var(--gap)
+            padding-right: var(--gap)
 
         div.text
             padding-top: 95px
             padding-bottom: 95px
+            z-index: 1
             +screen(s)
                 padding-top: unset
                 padding-bottom: unset
@@ -38,7 +44,7 @@ section.main
                     font-size: inherit
                     font-weight: inherit
                     line-height: inherit
-                    
+
             span
                 display: block
                 margin-bottom: 32px
@@ -49,7 +55,7 @@ section.main
                 +screen(m)
                     font-size: 12px
                     margin-bottom: 24px
-            
+
             a.button
                 padding: 20px 40px
                 justify-self: start
@@ -58,11 +64,31 @@ section.main
                     padding: 14px 32px
 
         div.image
+            z-index: 1
+            mix-blend-mode: multiply
             img
                 width: 100%
                 +screen(s)
                     width: calc(100% + 40px)
                     margin-left: -20px
+
+        div.background
+            display: none
+            position: absolute
+            top: calc(var(--gap) * -1)
+            left: 0
+            width: 100%
+            height: calc(100% + var(--gap) * 2)
+            object-fit: cover
+            object-position: center center
+            z-index: 0
+            +screen(s)
+                display: block
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center
 
     div.swiper-navigation
         position: absolute
@@ -72,4 +98,4 @@ section.main
         +screen(s)
             bottom: 8px
             left: unset
-            right: 0
+            right: var(--gap)

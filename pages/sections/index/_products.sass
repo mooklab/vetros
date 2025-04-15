@@ -7,7 +7,7 @@ section.products
 
     div.container
         display: grid
-        grid-template-areas: 'Title Description' 'Product Gallery' '. Additional'
+        grid-template-areas: 'Title Description' 'Product Gallery' '.Additional'
         grid-template-columns: 5fr 7fr
         grid-gap: 32px 20px
         +screen(m)
@@ -37,12 +37,13 @@ section.products
         display: grid
         align-content: space-between
         padding: 40px
+        min-height: 575px
         border: 1px solid $osnovnoy-chernyy
         border-radius: 5px
         background: white
         z-index: 1
         +screen(m)
-            height: 245px
+            min-height: 245px
             padding: 25px 20px
             margin-top: 20px
             margin-bottom: 20px
@@ -134,7 +135,7 @@ section.products
             +screen(m)
                 transition: unset
                 opacity: 1
-            
+
             &.swiper-slide-active
                 opacity: 1
                 pointer-events: auto
