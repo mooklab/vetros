@@ -15,6 +15,11 @@ section.main div.container {
     grid-column: full;
   }
 }
+@media (max-width: 640px) {
+  section.main div.swiper {
+    overflow: visible;
+  }
+}
 section.main div.swiper-slide {
   display: grid;
   grid-template-columns: 734fr 856fr;
@@ -27,6 +32,7 @@ section.main div.swiper-slide {
     grid-gap: 22px;
     padding-left: var(--gap);
     padding-right: var(--gap);
+    overflow: visible;
   }
 }
 section.main div.swiper-slide div.text {
