@@ -86,7 +86,11 @@ section.main div.swiper-slide div.text a.button {
 }
 section.main div.swiper-slide div.image {
   z-index: 1;
-  mix-blend-mode: multiply;
+}
+@media (max-width: 640px) {
+  section.main div.swiper-slide div.image {
+    display: none;
+  }
 }
 section.main div.swiper-slide div.image img {
   width: 100%;
